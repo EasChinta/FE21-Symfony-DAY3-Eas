@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+	<div class="container d-flex justify-content-between">
+		<div class="card mb-3">
+			<img src="{{blog.picture}}" class="card-img-top" alt="...">
+			<div class="card-body">
+				<h2 class="card-title text-center">{{blog.title}}</h2>
+				<p class="card-text">{{blog.description}}</p>
+				<p class="card-text">
+					<a href="/details/{{blog.id}}" class="btn-grad">View</a>
+					<a href="/edit/{{blog.id}}" class="btn-grad3">Edit</a>
+					<a href="/delete/{{blog.id}}" onclick="return confirm('Are you sure?')" class="btn-grad2">Delete</a>
+				</p>
+			</div>
+		</div>
+	</div>
+{% endblock %}
